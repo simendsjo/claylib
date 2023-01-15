@@ -9,6 +9,9 @@
      :active 0)
     (:documentation "Combo Box control, sets ACTIVE to selected item index")))
 
+(define-print-object gui-combo-box
+    (active))
+
 (defun-pt-num gui-combo-box claylib/ll:gui-combo-box
   "Combo Box control, returns selected item index"
   (bounds rl-rectangle)

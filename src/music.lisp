@@ -23,6 +23,9 @@
 (defcreader      ctx-data    rl-music ctx-data    music)
 (defcreader-bool looping     rl-music looping     music)
 
+(define-print-object rl-music
+  (pitch volume astream frame-count ctx-type ctx-data looping))
+
 (defcwriter-bool looping rl-music looping music)
 
 (defwriter-float pitch rl-music)

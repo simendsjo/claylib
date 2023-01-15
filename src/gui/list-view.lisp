@@ -19,6 +19,9 @@
      :focus -1)
     (:documentation "List View control, sets ACTIVE to selected list item index")))
 
+(define-print-object gui-list-view
+    (active))
+
 (defmethod scroll-index ((list-view gui-list-view))
   (plus-c:c-ref (slot-value list-view '%scroll-index) :int))
 

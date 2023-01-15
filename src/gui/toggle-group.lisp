@@ -9,6 +9,9 @@
      :active 0)
     (:documentation "Toggle Group control, sets ACTIVE to active toggle index")))
 
+(define-print-object gui-toggle-group
+    (active))
+
 (defun-pt-num gui-toggle-group claylib/ll:gui-toggle-group
   "Toggle Group control, returns active toggle index"
   (bounds rl-rectangle)

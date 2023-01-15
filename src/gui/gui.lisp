@@ -78,6 +78,30 @@ sense to set this in your own code.")))
              :type rl-color
              :accessor color))))
 
+(define-print-object gui-object
+    (bounds))
+
+(define-print-object text-label
+    (text))
+
+(define-print-object text-box
+    (text-size))
+
+(define-print-object pressable
+    (pressed))
+
+(define-print-object editable
+    (edit-mode))
+
+(define-print-object int-values
+    (min-value max-value))
+
+(define-print-object value-bar
+    (text-left text-right value min-value max-value))
+
+(define-print-object gui-color
+    (color))
+
 (defmethod text ((text-box text-box))
   (plus-c:c-ref (slot-value text-box '%text) :char string))
 

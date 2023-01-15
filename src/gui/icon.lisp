@@ -15,6 +15,9 @@
                   :type integer
                   :accessor pixel-size))))
 
+(define-print-object gui-icon
+    (icon-id x y pixel-size))
+
 (defun-pt-void gui-draw-icon claylib/ll:gui-draw-icon
   "Draw a gui icon"
   (icon-id integer)

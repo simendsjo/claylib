@@ -12,6 +12,9 @@
               :type (integer 0 *)
               :accessor slices))))
 
+(define-print-object sphere
+    (radius rings slices))
+
 (definitializer cube
   :lisp-slots ((%radius) (%rings) (%slices)))
 
